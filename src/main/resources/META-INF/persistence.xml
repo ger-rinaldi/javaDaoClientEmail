@@ -14,7 +14,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
             <property name="jakarta.persistence.jdbc.user"
                       value="placeholder" />
             <property name="jakarta.persistence.jdbc.password" value="placeholder" />
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mvnHbn" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/placeholder" />
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />
         </properties>
 
