@@ -1,4 +1,4 @@
-package org.clients;
+package org.Bussiness;
 
 import jakarta.persistence.*;
 

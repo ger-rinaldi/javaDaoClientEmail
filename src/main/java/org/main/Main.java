@@ -3,10 +3,10 @@ package org.main;
 
 import java.util.*;
 
-import org.clients.Client;
-import org.clients.ClientDao;
-import org.clients.Email;
-import org.clients.EmailDao;
+import org.Bussiness.Client;
+import org.Bussiness.Email;
+import org.Database.ClientDao;
+import org.Database.EmailDao;
 
 public class Main {
     public static void main(String[] args) {

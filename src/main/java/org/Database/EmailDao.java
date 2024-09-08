@@ -1,7 +1,9 @@
-package org.clients;
+package org.Database;
 
 import java.util.List;
 import java.util.Optional;
+
+import org.Bussiness.Email;
 
 public class EmailDao extends AbstractDaoCrud<Email> {
     public EmailDao() {

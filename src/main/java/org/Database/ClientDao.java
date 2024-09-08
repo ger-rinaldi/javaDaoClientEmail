@@ -1,7 +1,9 @@
-package org.clients;
+package org.Database;
 
 import java.util.List;
 import java.util.Optional;
+
+import org.Bussiness.Client;
 
 public class ClientDao extends AbstractDaoCrud<Client> {
     public ClientDao() {
