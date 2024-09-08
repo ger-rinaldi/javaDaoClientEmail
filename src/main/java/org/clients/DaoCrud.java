@@ -9,6 +9,7 @@ public interface DaoCrud<T> {
     void saveAll(List<T> lt);
 
     void update(T t);
+
     void delete(T t);
 
     Optional<T> getById(String idColumnName, String id);

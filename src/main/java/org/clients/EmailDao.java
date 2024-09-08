@@ -8,11 +8,11 @@ public class EmailDao extends AbstractDaoCrud<Email> {
         super(Email.class);
     }
 
-    public List<Email> getEmails(){
+    public List<Email> getEmails() {
         return this.getAll();
     }
 
-    public Optional<Email> getById(int id){
+    public Optional<Email> getById(int id) {
         return this.getById("id", Integer.toString(id));
     }
 

@@ -14,7 +14,7 @@ public class Client {
     @Column
     private String surname;
 
-    public Client(){
+    public Client() {
         super();
     }
 
@@ -32,14 +32,13 @@ public class Client {
         this.dni = dni;
     }
 
-    public String getName()
-        {
+    public String getName() {
         return name;
-        }
-    public void setName(String name)
-        {
+    }
+
+    public void setName(String name) {
         this.name = name;
-        }
+    }
 
     public String getSurname() {
         return surname;

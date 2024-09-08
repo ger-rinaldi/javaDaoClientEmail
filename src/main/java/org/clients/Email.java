@@ -3,13 +3,13 @@ package org.clients;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name ="email")
+@Table(name = "email")
 public class Email {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     @ManyToOne
-    @JoinColumn(name ="client_id")
+    @JoinColumn(name = "client_id")
     Client client;
     @Column
     String content;

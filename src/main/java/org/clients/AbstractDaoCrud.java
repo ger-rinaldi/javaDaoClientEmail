@@ -18,6 +18,7 @@ public class AbstractDaoCrud<T> implements DaoCrud<T> {
         this.setEntityManager();
         this.entityTypeT = entityTypeT;
     }
+
     public void setEntityTypeT(Class<T> entityTypeT) {
         this.entityTypeT = entityTypeT;
     }
@@ -26,14 +27,13 @@ public class AbstractDaoCrud<T> implements DaoCrud<T> {
         return this.entityTypeT;
     }
 
-    private void setEntityManager(){
+    private void setEntityManager() {
         this.entityManager = EntityManagerSingleton.getEntityManager();
     }
+
     public EntityManager getEntityManager() {
         return this.entityManager;
     }
-
-
 
     @Override
     public void save(T t) {
@@ -46,16 +46,16 @@ public class AbstractDaoCrud<T> implements DaoCrud<T> {
     }
 
     @Override
-    public Optional<T> getById(String idColumnName, String id){
+    public Optional<T> getById(String idColumnName, String id) {
 
         String baseQueryString = "SELECT t FROM %s t WHERE t.%s = :%s";
 
         String formatedQueryString = String.format(baseQueryString,
-                                                   this.entityTypeT.getName(),
-                                                   idColumnName, idColumnName);
+                this.entityTypeT.getName(),
+                idColumnName, idColumnName);
 
         TypedQuery<T> q = this.entityManager.createQuery(formatedQueryString,
-                                                         this.entityTypeT);
+                this.entityTypeT);
 
         q.setParameter(idColumnName, id);
 
@@ -81,7 +81,7 @@ public class AbstractDaoCrud<T> implements DaoCrud<T> {
         this.executeInTransaction(entityManager -> entityManager.remove(t));
     }
 
-    protected void executeInTransaction(Consumer<EntityManager> action){
+    protected void executeInTransaction(Consumer<EntityManager> action) {
         EntityTransaction t = this.entityManager.getTransaction();
         try {
             t.begin();
